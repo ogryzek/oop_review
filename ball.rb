@@ -1,11 +1,11 @@
 class Ball
-  # your code goes here
   # constructor method
-  def initialize
+  def initialize(ball_type = "regular")
+    @ball_type = ball_type.downcase == "regular" ? ball_type : "super"
   end
 
   # getter method
   def ball_type
-    'regular'
+    @ball_type
   end
 end
