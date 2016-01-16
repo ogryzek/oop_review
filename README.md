@@ -10,14 +10,10 @@ Create a class `Ball` with a `ball_type` attribute; knowing that `ball_type` wil
 Let's start out by creating a ball class that has a getter method for `ball_type`, and a default ball type of `"regular"`
 ```ruby
 class Ball
-  # constructor method
-  def initialize(ball_type = "regular")
-    @ball_type = ball_type.downcase == "regular" ? "regular : "super"
+  def initialize
   end
 
-  # getter method
   def ball_type
-    @ball_type
   end
 end
 ```
@@ -26,10 +22,14 @@ Now, I'd really like to be able to initialize new ball objects with a `ball_type
 We should also initialize an instance variable, so our getter method can return a dynamic value.
 ```ruby
 class Ball
-  def initialize
+  # constructor method
+  def initialize(ball_type = "regular")
+    @ball_type = ball_type.downcase == "regular" ? "regular : "super"
   end
 
+  # getter method
   def ball_type
+    @ball_type
   end
 end
 ```
